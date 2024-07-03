@@ -1,4 +1,4 @@
-﻿#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>
 
@@ -45,23 +45,23 @@ int main()
 	//else
 	//	printf("adult\n");
 
-	多分支
-	int a = 10;
-	scanf("%d", &a);
-	if (a < 13)
-		printf("kid\n");
-	else if (a >= 13 && a < 18)
-		printf("teens\n");
-	else if (a >= 18 && a < 25)
-		printf("youth\n");
-	else if (a >= 25 && a < 40)
-		printf("adult\n");
-	else if (a >= 40 && a < 60)
-		printf("middle-aged\n");
-	else
-		printf("elder\n");
+	////多分支
+	//int a = 10;
+	//scanf("%d", &a);
+	//if (a < 13)
+	//	printf("kid\n");
+	//else if (a >= 13 && a < 18)
+	//	printf("teens\n");
+	//else if (a >= 18 && a < 25)
+	//	printf("youth\n");
+	//else if (a >= 25 && a < 40)
+	//	printf("adult\n");
+	//else if (a >= 40 && a < 60)
+	//	printf("middle-aged\n");
+	//else
+	//	printf("elder\n");
 	
-	// 悬空else
+	////悬空else
 	//int a = 10;
 	//int b = 20;
 	//if (a == 1)//调试结果为不打印，因为a不等于1，所以接下来的程序都不会运行
@@ -70,4 +70,58 @@ int main()
 	//	else//else会和最靠近的if对应，而不是和与其对齐的if对应
 	//		printf("hhe\n");
 
+
+
+
+	////switch语句 - switch(整型表达式）
+	//				{
+	//				case (整型常量表达式）：
+	//					语句；	
+	//				}
+	//通常用于多分支的情况
+	int day = 0;
+	scanf("%d", &day);
+	switch (day)
+	{
+	case 1:
+		printf("monday\n");
+		break;//break用于跳出语句，如果没有写break程序会接着打印而不会停下来
+	case 2:
+		printf("tuesday\n");
+		break;
+	case 3:
+		printf("wednesday\n");
+		break;
+	case 4:
+		printf("thursday\n");
+		break;
+	case 5:
+		printf("friday\n");
+		break;
+	case 6:
+		printf("saturday\n");
+		break;
+	case 7:
+		printf("sunday\n");
+		break;
+	}
+	switch (day)
+	{
+	case 1:
+	case 2:
+	case 3:
+	case 4:
+	case 5:
+		printf("weekday\n");
+		break;
+	case 6:
+	case 7:
+		printf("weekend\n");
+		break;
+	//case只包含了1~7，那么如果输入的数字不在这个范围里面，我们就可以使用default字句来包含这些
+		//每个switch语句只能有一个default字句
+	default:
+		printf("wrong type\n");
+		break;
+	}
 }
